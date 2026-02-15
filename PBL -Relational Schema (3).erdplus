@@ -1,0 +1,486 @@
+{
+  "diagramType": 2,
+  "data": {
+    "nodes": [
+      {
+        "id": "be376534-91cf-4d82-b9ea-6b46b075817a",
+        "type": "Table",
+        "position": {
+          "x": 604.5322083233295,
+          "y": -145.96128966605295
+        },
+        "data": {
+          "label": "SLEEP_DATA",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "b8d413dc-5913-4e7e-a55f-cf834985b970",
+              "name": "user_id",
+              "type": "INT",
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "bca65974-dd68-4d25-8d7a-10ab63bffa38",
+              "name": "sleep_start_timestamp",
+              "type": "INT",
+              "isPrimaryKey": false,
+              "isUnique": true
+            },
+            {
+              "id": "ed3f125e-9403-4763-a901-ccf168df2fe5",
+              "name": "sleep_end_timestamp",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "23797742-4650-466c-9163-8eaaeb3606de",
+              "name": "total_sleep_hrs",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "1eba518f-603e-4128-9008-4ad6f502efd3",
+              "name": "mean_heart_rate",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "b6f2e5f7-2301-4bcd-977d-2e615110b65f",
+              "name": "min_heart_rate",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "1ea7d7d0-8776-468c-ba7d-79f2e337019c",
+              "name": "max_heart_rate",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "d0ba07c9-a21d-4377-8228-3e7799fddd0b",
+              "name": "sleep_rating",
+              "type": "INT",
+              "isPrimaryKey": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 100,
+          "height": 50
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "006d38dc-5e11-49d8-877d-db476652aa17",
+        "type": "Table",
+        "position": {
+          "x": 1715.8579540622368,
+          "y": -142.9193494783077
+        },
+        "data": {
+          "label": "ACTIVITY_DATA",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "c8434a61-6376-418b-8cd7-a97188f2c336",
+              "name": "activity_date",
+              "type": "INT",
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "1a2797e3-8889-4931-ade8-dbdaff456759",
+              "name": "day",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "096cd942-057f-4d17-92a0-59e366737f8f",
+              "name": "steps",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "6972afce-2772-4f93-a2bd-3aec490c45bf",
+              "name": "distance",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "79003eda-bbd0-4312-b027-f2ade84595c5",
+              "name": "calories_burned",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "2871e947-f402-4329-b176-27cc5b5401f2",
+              "name": "user_id",
+              "type": "INT",
+              "isPrimaryKey": false,
+              "isUnique": true
+            },
+            {
+              "id": "1bba7c13-44a5-474b-ab39-c66dbbe45a24",
+              "name": "fk_SCREEN_DATA",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "a9493dfc-5dd2-4eda-a034-321d21ce3096",
+                "sourceTableId": "64f671be-0f61-41b4-9e38-eb4581af102c",
+                "columns": [
+                  {
+                    "id": "fk_dd7f3ad5-0253-44e5-8c8b-1042ee98b337",
+                    "name": "user_id",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isOptional": false
+            },
+            {
+              "id": "8bedcae8-7776-4714-b02c-3c9acd0820e1",
+              "name": "fk_SLEEP_DATA",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "5db75ab9-9c2c-43ff-9428-2e5f77355ae2",
+                "sourceTableId": "be376534-91cf-4d82-b9ea-6b46b075817a",
+                "columns": [
+                  {
+                    "id": "fk_b8d413dc-5913-4e7e-a55f-cf834985b970",
+                    "name": "user_id",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isOptional": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 100,
+          "height": 253
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "25056cf1-79f2-459b-bf1d-5d582dc6fe34",
+        "type": "Table",
+        "position": {
+          "x": 1708.7547052937853,
+          "y": 457.5534177481468
+        },
+        "data": {
+          "label": "DAILY_MOOD_LOG",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "69dbd0ca-76dd-462c-aadf-774a492bd5c2",
+              "name": "mood_date",
+              "type": "INT",
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "f7027ae6-5974-4465-950d-c54cccb81e3a",
+              "name": "user_id",
+              "type": "INT",
+              "isPrimaryKey": false,
+              "isUnique": true
+            },
+            {
+              "id": "6d0f73d1-af85-4893-bfcc-3b26553145f2",
+              "name": "mood_time",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "74bcc6b9-c509-4996-a78f-a1f79aa2d5dc",
+              "name": "day",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "f513636b-f86e-4b72-a12e-7da8df0ece53",
+              "name": "mood",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "eb52a88b-ab58-4324-b290-a1b735bdb9a9",
+              "name": "rating",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "7a342fbf-1997-47f2-928d-733ff3317180",
+              "name": "fk_ACTIVITY_DATA",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "95d6599b-d1f4-40fe-9bcb-430933e4c52b",
+                "sourceTableId": "006d38dc-5e11-49d8-877d-db476652aa17",
+                "columns": [
+                  {
+                    "id": "fk_c8434a61-6376-418b-8cd7-a97188f2c336",
+                    "name": "activity_date",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isOptional": false
+            },
+            {
+              "id": "39170ac1-fa0d-4b9c-a22b-5898f3f8a33a",
+              "name": "fk_SCREEN_DATA",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "5b5f93f4-1d0c-4fc0-b3c8-6a846df38766",
+                "sourceTableId": "64f671be-0f61-41b4-9e38-eb4581af102c",
+                "columns": [
+                  {
+                    "id": "fk_dd7f3ad5-0253-44e5-8c8b-1042ee98b337",
+                    "name": "user_id",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isOptional": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 100,
+          "height": 253
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "64f671be-0f61-41b4-9e38-eb4581af102c",
+        "type": "Table",
+        "position": {
+          "x": 589.9861466610103,
+          "y": 449.2468721563972
+        },
+        "data": {
+          "label": "SCREEN_DATA",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "dd7f3ad5-0253-44e5-8c8b-1042ee98b337",
+              "name": "user_id",
+              "type": "INT",
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "40a162c9-2627-4e0c-9030-88d9723d1f99",
+              "name": "age",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "c4929945-3388-4179-9491-a41e8f0ea51e",
+              "name": "gender",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "9b8ef1c6-b3f4-4062-851f-40a2fc2241b3",
+              "name": "occupation",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "7d642d3b-0de0-4b96-844c-2794400f4d4b",
+              "name": "off_screen_adjusted",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "836b5b3b-b5f4-4ee2-8902-2bbfbfd0901b",
+              "name": "screen_time_adjusted",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "7678c2e7-627d-4de0-ae1d-3f6441f38256",
+              "name": "activity_date",
+              "type": "INT",
+              "isPrimaryKey": false,
+              "isUnique": true
+            },
+            {
+              "id": "07cc8534-59a9-4a3e-beb4-947cb6d6a955",
+              "name": "fk_SLEEP_DATA",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "662f0203-323a-474e-b286-9720c35b1738",
+                "sourceTableId": "be376534-91cf-4d82-b9ea-6b46b075817a",
+                "columns": [
+                  {
+                    "id": "fk_b8d413dc-5913-4e7e-a55f-cf834985b970",
+                    "name": "user_id",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isOptional": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 100,
+          "height": 253
+        },
+        "selected": false,
+        "dragging": false
+      }
+    ],
+    "edges": [
+      {
+        "id": "64f671be-0f61-41b4-9e38-eb4581af102c->006d38dc-5e11-49d8-877d-db476652aa17_a9493dfc-5dd2-4eda-a034-321d21ce3096",
+        "type": "Relational",
+        "source": "64f671be-0f61-41b4-9e38-eb4581af102c",
+        "targetHandle": "foreign-key-handle-a9493dfc-5dd2-4eda-a034-321d21ce3096",
+        "target": "006d38dc-5e11-49d8-877d-db476652aa17",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "a9493dfc-5dd2-4eda-a034-321d21ce3096",
+            "sourceTableId": "64f671be-0f61-41b4-9e38-eb4581af102c",
+            "columns": [
+              {
+                "id": "fk_dd7f3ad5-0253-44e5-8c8b-1042ee98b337",
+                "name": "user_id",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "be376534-91cf-4d82-b9ea-6b46b075817a->006d38dc-5e11-49d8-877d-db476652aa17_5db75ab9-9c2c-43ff-9428-2e5f77355ae2",
+        "type": "Relational",
+        "source": "be376534-91cf-4d82-b9ea-6b46b075817a",
+        "targetHandle": "foreign-key-handle-5db75ab9-9c2c-43ff-9428-2e5f77355ae2",
+        "target": "006d38dc-5e11-49d8-877d-db476652aa17",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "5db75ab9-9c2c-43ff-9428-2e5f77355ae2",
+            "sourceTableId": "be376534-91cf-4d82-b9ea-6b46b075817a",
+            "columns": [
+              {
+                "id": "fk_b8d413dc-5913-4e7e-a55f-cf834985b970",
+                "name": "user_id",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "006d38dc-5e11-49d8-877d-db476652aa17->25056cf1-79f2-459b-bf1d-5d582dc6fe34_95d6599b-d1f4-40fe-9bcb-430933e4c52b",
+        "type": "Relational",
+        "source": "006d38dc-5e11-49d8-877d-db476652aa17",
+        "targetHandle": "foreign-key-handle-95d6599b-d1f4-40fe-9bcb-430933e4c52b",
+        "target": "25056cf1-79f2-459b-bf1d-5d582dc6fe34",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "95d6599b-d1f4-40fe-9bcb-430933e4c52b",
+            "sourceTableId": "006d38dc-5e11-49d8-877d-db476652aa17",
+            "columns": [
+              {
+                "id": "fk_c8434a61-6376-418b-8cd7-a97188f2c336",
+                "name": "activity_date",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "64f671be-0f61-41b4-9e38-eb4581af102c->25056cf1-79f2-459b-bf1d-5d582dc6fe34_5b5f93f4-1d0c-4fc0-b3c8-6a846df38766",
+        "type": "Relational",
+        "source": "64f671be-0f61-41b4-9e38-eb4581af102c",
+        "targetHandle": "foreign-key-handle-5b5f93f4-1d0c-4fc0-b3c8-6a846df38766",
+        "target": "25056cf1-79f2-459b-bf1d-5d582dc6fe34",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "5b5f93f4-1d0c-4fc0-b3c8-6a846df38766",
+            "sourceTableId": "64f671be-0f61-41b4-9e38-eb4581af102c",
+            "columns": [
+              {
+                "id": "fk_dd7f3ad5-0253-44e5-8c8b-1042ee98b337",
+                "name": "user_id",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "be376534-91cf-4d82-b9ea-6b46b075817a->64f671be-0f61-41b4-9e38-eb4581af102c_662f0203-323a-474e-b286-9720c35b1738",
+        "type": "Relational",
+        "source": "be376534-91cf-4d82-b9ea-6b46b075817a",
+        "targetHandle": "foreign-key-handle-662f0203-323a-474e-b286-9720c35b1738",
+        "target": "64f671be-0f61-41b4-9e38-eb4581af102c",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "662f0203-323a-474e-b286-9720c35b1738",
+            "sourceTableId": "be376534-91cf-4d82-b9ea-6b46b075817a",
+            "columns": [
+              {
+                "id": "fk_b8d413dc-5913-4e7e-a55f-cf834985b970",
+                "name": "user_id",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "viewport": {
+      "x": 134.42773852104392,
+      "y": 292.51548358820276,
+      "zoom": 0.5
+    }
+  },
+  "name": "PBL -Relational Schema (3)",
+  "folder": {
+    "name": "Diagrams",
+    "folderType": 1,
+    "depth": 0,
+    "id": 97070
+  },
+  "id": 254620,
+  "updatedAtTimestamp": 1770144568
+}
