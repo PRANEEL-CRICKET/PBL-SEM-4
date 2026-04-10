@@ -1,0 +1,5 @@
+DB_HOST=localhost
+DB_USER=ujjwal
+DB_PASSWORD=1234
+DB_NAME=health_tracking_system
+PORT=5000
